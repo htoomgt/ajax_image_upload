@@ -1,0 +1,26 @@
+div#preview{
+    padding:16px 0;
+}
+
+div#loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 80%;
+    z-index: 1000;
+    display: none;
+}
+
+div#loading div{
+    position: absolute;
+    top:40%;
+    left:40%;
+    -ms-transform: translate(-40%, -40%);
+    transform: translate(-40%, -40%);
+    /*border: 1px solid #000;*/
+}
+
+div#loading div img{
+    /*width: 60%;*/
+}
