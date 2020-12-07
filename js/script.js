@@ -1,4 +1,27 @@
 $(document).ready(function (){
+
+    $('#uploadImage').change(function(e){
+        previewImage(this, $("#previewImg"));
+    });
+
+    $('#name').change(function(){
+        console.log($('#name').val());
+        if($('#name').val() != ""){
+            $('#err_name').html("")
+        }
+    });
+
+    $('#email').change(function(){
+        if($('#email').val() !== ""){
+            $('#err_email').html("")
+        }
+    });
+
+    $('#reset').click(function(){
+        $("#uploadedImage").attr("src", "");
+        $("#previewImg").attr("src", "./img/google_doc.png");
+    })
+
     $("#form").submit(function(e){
         e.preventDefault();
 
@@ -16,7 +39,8 @@ $(document).ready(function (){
             success : function(res){
                 console.log(res);
                 if(res.status == "success"){
-                    $("#previewImg").attr("src", res.image_link);
+                    $("#uploadedImage").attr("src", res.image_link);
+                    $("#previewImg").attr("src", "./img/google_doc.png");
                     errMessageClear();
                 }
             },
@@ -54,3 +78,29 @@ $(document).ready(function (){
         $("#err_common").html("");
     }
 });
+
+let previewImage = (input, block) => {
+    block.show();
+    let fileTypes = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
+    let extension = input.files[0].name.split('.').pop().toLowerCase();
+    let checkAllowedExt = fileTypes.indexOf(extension) > -1;
+    let fileSize = input.files[0].size;
+
+    if((fileSize / 1024 / 1024) > 5){
+        $("#err_image").html("Chosen file size should be less 5 MB.");
+    }
+    else if(!checkAllowedExt){
+        $("#err_image").html("It is not valid extension. Valid extension are jpg, jpeg, png, gif, bmp");
+    }
+    else{
+        let reader = new FileReader();
+
+        reader.onload = function(e){
+            block.attr('src', e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+        $("#err_image").html("");
+
+    }
+
+}

@@ -24,3 +24,8 @@ div#loading div{
 div#loading div img{
     /*width: 60%;*/
 }
+
+div#uploadedImageContainer{
+    padding: 4px;
+    border: 2px solid #000;
+}

@@ -16,3 +16,5 @@ To test the ajax image upload with jquery and php.
 2. Check upload file size by JS and PHP [link](https://stackoverflow.com/questions/11514166/check-file-size-before-upload)
 3. Max upload check by PHP [link](https://www.sitepoint.com/community/t/checking-an-uploaded-files-size/94771)
 4. Byte exchange format [link](https://www.sitepoint.com/community/t/check-maximum-size-of-upload-file/83286)
+5. Preview Image on change of file input [link](https://stackoverflow.com/questions/26427804/jquery-image-preview-on-change)
+6. Jquery file size check on on change of file input [link](https://www.geeksforgeeks.org/validation-of-file-size-while-uploading-using-javascript-jquery/)

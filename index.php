@@ -59,8 +59,12 @@
                         <small id="err_common" class="text-danger"></small>
                         <div id="preview" ><img src="./img/google_doc.png" alt="image preview" width="128px" id="previewImg"></div>
                         <input type="submit" value="Upload" class="btn btn-success" />
+                        <input type="reset" value="Reset" class="btn btn-warning" id="reset"/>
                     </div>
                 </form>
+            </div>
+            <div class="col-lg-4 col-4" id="uploadedImageContainer">
+                <img src="" id="uploadedImage" width="100%" style="2px solid #000;"/>
             </div>
         </div>
     </div>
