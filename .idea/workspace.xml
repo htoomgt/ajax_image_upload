@@ -4,6 +4,9 @@
     <list default="true" id="a6ee2ee5-f9ed-4d43-8618-eeadee9af5f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax_upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload" beforeDir="false" afterPath="$PROJECT_DIR$/upload" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upload/2020120616443894-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upload/2020120616461894-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
@@ -70,7 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607251482325</updated>
       <workItem from="1607251483475" duration="6724000" />
-      <workItem from="1607268850870" duration="5956000" />
+      <workItem from="1607268850870" duration="6441000" />
+      <workItem from="1607326228413" duration="3987000" />
     </task>
     <servers />
   </component>
@@ -87,5 +91,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

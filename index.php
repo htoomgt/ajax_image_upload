@@ -43,16 +43,20 @@
                     <div class="form-group">
                         <label for="name">Name <span class="text-danger">*</span>: </label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name"  />
+                        <small id="err_name" class="text-danger"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email <span class="text-danger">*</span>: </label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"  />
+                        <small id="err_email" class="text-danger"></small>
                     </div>
 
                     <div class="form-group">
-                        <label for="uploadImage">Your Image : </label>
+                        <label for="uploadImage">Your Image <span class="text-danger">*</span> : </label>
                         <input type="file" id="uploadImage" accept="image/*" name="image" />
+                        <small id="err_image" class="text-danger"></small>
+                        <small id="err_common" class="text-danger"></small>
                         <div id="preview" ><img src="./img/google_doc.png" alt="image preview" width="128px" id="previewImg"></div>
                         <input type="submit" value="Upload" class="btn btn-success" />
                     </div>

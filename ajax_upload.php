@@ -32,11 +32,11 @@ function getImageLink($uploadedFile):string{
         $requestDomain = str_replace("ajax_upload.php", "", $_SERVER['REQUEST_URI']);
         $url .= $requestDomain;
 
-        $imageLink = $url."/upload/".$uploadedFile;
+        $imageLink = $url."upload/".$uploadedFile;
     }
     return $imageLink;
 }
-sleep(1);
+
 
 $uploadedFile = "";
 $tmpFileName = "";
@@ -78,23 +78,54 @@ if(!empty($_FILES['image'])){
     $uploadedFile = $_FILES['image']['name'];
     $tmpFileName = $_FILES['image']['tmp_name'];
     $errorImg = $_FILES['image']['error'];
+    $fileSize = $_FILES['image']['size'];
+
     // get uploaded file's extension
     $ext = strtolower(pathinfo($uploadedFile, PATHINFO_EXTENSION));
-    if(!in_array($ext, $valid_extensions)){
+
+    if($fileSize == 0){
+
         $response['status'] = "invalid";
         $httpStatus = 422;
-        $imageErr = ['err_image' => 'Invalid file extension. Valid ext are jpg, jpeg, png, gif, bmp'];
+        $imageErr = ['err_image' => 'Image File is missing in upload'];
         $response['messages'] = array_merge($response['messages'], $imageErr);
         $errorStatus = 1;
     }
+    else{
+        // check extension
+        if(!in_array($ext, $valid_extensions)){
+            $response['status'] = "invalid";
+            $httpStatus = 422;
+            $imageErr = ['err_image' => 'Invalid file extension. Valid ext are jpg, jpeg, png, gif, bmp'];
+            $response['messages'] = array_merge($response['messages'], $imageErr);
+            $errorStatus = 1;
+        }
+
+        // check file size
+        if($fileSize > 5242880){
+
+            $response['status'] = "invalid";
+            $httpStatus = 422;
+            $imageErr = ['err_image' => 'File size should not be larger than 5 MB'];
+            $response['messages'] = array_merge($response['messages'], $imageErr);
+            $errorStatus = 1;
+        }
+    }
+
+
+
+}
+else{
+
 }
 
 if($errorStatus == 0){
     try {
 
 
-        $finalImage = date('YmdHis').$uploadedFile;
-        $path = $path.strtolower($finalImage);
+        $finalImage = uniqid()."_".$uploadedFile;
+        $finalImage = strtolower($finalImage);
+        $path = $path.$finalImage;
 
         move_uploaded_file($tmpFileName, $path);
         $imageLink = getImageLink($finalImage);
@@ -130,6 +161,7 @@ if($errorStatus == 0){
 
 
 header("Content-Type:application/json; charset:UTF-8");
+http_response_code($httpStatus);
 echo json_encode($response);
 
 
