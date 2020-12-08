@@ -37,6 +37,7 @@ function getImageLink($uploadedFile):string{
     return $imageLink;
 }
 
+sleep(1);
 
 $uploadedFile = "";
 $tmpFileName = "";
@@ -116,7 +117,11 @@ if(!empty($_FILES['image'])){
 
 }
 else{
-
+    $response['status'] = "invalid";
+    $httpStatus = 422;
+    $imageErr = ['err_image' => 'Image File is missing in upload'];
+    $response['messages'] = array_merge($response['messages'], $imageErr);
+    $errorStatus = 1;
 }
 
 if($errorStatus == 0){

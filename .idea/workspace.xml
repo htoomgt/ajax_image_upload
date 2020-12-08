@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ee2ee5-f9ed-4d43-8618-eeadee9af5f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/jquery_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax_upload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload" beforeDir="false" afterPath="$PROJECT_DIR$/upload" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616443894-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616461894-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616462494-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616482994-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616500494-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616504394-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616513594-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/2020120616515394-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/94-941210_flag-icon-red-google-maps-flag-icon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +71,8 @@
       <workItem from="1607268850870" duration="6441000" />
       <workItem from="1607326228413" duration="4726000" />
       <workItem from="1607370175861" duration="2432000" />
+      <workItem from="1607424578187" duration="595000" />
+      <workItem from="1607425409392" duration="5685000" />
     </task>
     <servers />
   </component>

@@ -7,34 +7,43 @@ $(document).ready(function (){
     $('#name').change(function(){
         console.log($('#name').val());
         if($('#name').val() != ""){
-            $('#err_name').html("")
+            $('#err_name').html("");
         }
     });
 
     $('#email').change(function(){
         if($('#email').val() !== ""){
-            $('#err_email').html("")
+            $('#err_email').html("");
         }
     });
 
     $('#reset').click(function(){
         $("#uploadedImage").attr("src", "");
         $("#previewImg").attr("src", "./img/google_doc.png");
+        errMessageClear();
     })
 
-    $("#form").submit(function(e){
-        e.preventDefault();
+    $("#btnUpload").click(function(e){
+        // e.preventDefault();
 
 
-        $.ajax({
+        $('#form').ajaxForm({
+            target: "#uploadedImage",
             url : "ajax_upload.php",
-            type : "POST",
-            data : new FormData(this),
-            contentType : false,
-            cache : false,
-            processData : false,
-            beforeSend : function (){
-                $("#loading").show(300);
+            // type : "POST",
+            // data : new FormData($('#form')[0]),
+            // contentType : false,
+            // cache : false,
+            // processData : false,
+            beforeSubmit : function (){
+                $("#loading_image_gif").show(300);
+                $("#progressDivId").show();
+                // $("#percent").html("0%");
+                $("#progressBar").width("0%");
+                // console.log("before send trigger");
+                $("#btnUpload").prop('disabled', true);
+                $('#reset').prop('disabled', true);
+
             },
             success : function(res){
                 console.log(res);
@@ -43,6 +52,28 @@ $(document).ready(function (){
                     $("#previewImg").attr("src", "./img/google_doc.png");
                     errMessageClear();
                 }
+            },
+            uploadProgress : function(event, position, total, percentComplete){
+                let percentValue = percentComplete + "%";
+
+                $("#progressBar").animate({
+                    width: '' + percentValue + ''
+                }, {
+                    // duration : 3000,
+                    easing : "linear",
+                    step : function(x){
+
+                        let percentText = Math.round(x * 100 / percentComplete);
+
+                        // console.log(percentText);
+                        $("#progressBar").html(percentText+"%");
+
+                        if(percentText == "100"){
+
+                        }
+                    }
+                });
+
             },
             error : function(res){
                 // console.log(res);
@@ -66,7 +97,13 @@ $(document).ready(function (){
                 }
             },
             complete: function(res){
-                $("#loading").hide(400);
+                $("#loading_image_gif").hide(500);
+                $("#progressDivId").hide();
+                // $("#percent").html("0%");
+                $("#progressBar").width("0%");
+                $("#percent").css("color", "black");
+                $("#btnUpload").prop('disabled', false);
+                $('#reset').prop('disabled', false);
             }
         });
     });

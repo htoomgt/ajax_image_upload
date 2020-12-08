@@ -27,5 +27,22 @@ div#loading div img{
 
 div#uploadedImageContainer{
     padding: 4px;
-    border: 2px solid #000;
+    /*border: 2px solid #000;*/
+}
+
+.displayNone{
+    display: none;
+}
+
+
+
+#loading_image_gif{
+    width: 100%;
+    padding: 0 20%;
+    /*border:1px solid #000;*/
+}
+
+#percent{
+    font-weight: bolder;
+    z-index: 1000;
 }

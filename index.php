@@ -19,6 +19,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <!-- Jquery Form-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
 
@@ -58,12 +60,19 @@
                         <small id="err_image" class="text-danger"></small>
                         <small id="err_common" class="text-danger"></small>
                         <div id="preview" ><img src="./img/google_doc.png" alt="image preview" width="128px" id="previewImg"></div>
-                        <input type="submit" value="Upload" class="btn btn-success" />
+                        <input type="submit" value="Upload" class="btn btn-success"  id="btnUpload"/>
                         <input type="reset" value="Reset" class="btn btn-warning" id="reset"/>
                     </div>
                 </form>
             </div>
             <div class="col-lg-4 col-4" id="uploadedImageContainer">
+                <div class='progress displayNone' id="progressDivId">
+                    <div class='progress-bar' id='progressBar'>0%</div>
+<!--                    <div class='percent' id='percent'></div>-->
+                </div>
+                <div id="loading_image_gif" class="displayNone">
+                    <img src="./img/loading.gif" class="fluid-image"/>
+                </div>
                 <img src="" id="uploadedImage" width="100%" style="2px solid #000;"/>
             </div>
         </div>
