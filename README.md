@@ -10,7 +10,7 @@ To test the ajax image upload with jquery and php.
 - Loading gif (done)
 - Preview Image after the upload (done)
 - Preview Image before upload (done)
-- Progress bar during upload
+- Progress bar during upload (done)
 
 ## Referenced List
 1. Cloud way [link](https://www.cloudways.com/blog/the-basics-of-file-upload-in-php/)
