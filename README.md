@@ -12,6 +12,11 @@ To test the ajax image upload with jquery and php.
 - Preview Image before upload (done)
 - Progress bar during upload (done)
 
+## Used Library
+- Jquery
+- Jquery Form
+- Bootstrap CSS Framework
+
 ## Referenced List
 1. Cloud way [link](https://www.cloudways.com/blog/the-basics-of-file-upload-in-php/)
 2. Check upload file size by JS and PHP [link](https://stackoverflow.com/questions/11514166/check-file-size-before-upload)
